@@ -1,4 +1,4 @@
-<img width="160px" style="border-radius: 50%" bor src="style/head_portrait.jpg">
+[<img width="160px" height="120px" style="border-radius: 50%" bor src="img/1.jpg">](https://github.com/wys-wys/)
 
 # **docsify-demo**
 
@@ -9,5 +9,5 @@
 ![](https://img.shields.io/badge/%E6%91%B8%E9%B1%BC-%E7%A8%8B%E5%BA%8F%E5%91%98-green)
 
 [GitHub](https://github.com/mochazi/docsify-demo)
-[开始阅读](?id=中文文档)
+[开始阅读](?id=hahaha)
 
