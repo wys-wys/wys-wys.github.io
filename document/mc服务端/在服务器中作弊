@@ -1,0 +1,21 @@
+无法TP表示：玩家不是OP只可以TPA，想成为2113OP就在后台输入 OP 加5261ID
+　　4102如果当了OP也不行， 就去mcbbs下载一个1653服务器懒人包
+
+　　如何输入作弊码：
+　　1.创造与生存与冒险：按T，输入/gamemode 1(创造)2(冒险）0（生存）2.物品：give 名字 物品代码
+如无法输入，请点击对局域网开放，选择允许作弊。
+　　常用作弊码：
+
+　　/gamemode 0 生存
+/gamemode 1 创造
+/gamemode 2 冒险
+/fly 飞行
+/give xxx(你的名字) 物品ID（你用鼠标指向一个物品后面的数字代码) 个数（1-64）
+/gamerule调整游戏模式
+/gamerule doFireTick - 火是否会蔓延
+/gamerule doMobLoot - 生物会不会掉物品
+/gamerule doMobSpawning - 生物会不会自然生成
+/gamerule doTileDrops - 方块会不会掉落（对挂画无效）
+/gamerule keepInventory - 玩家死后物品是否保留在物品栏中
+/gamerule mobGriefing - 爬行者、末影人、凋灵能否改变方块
+

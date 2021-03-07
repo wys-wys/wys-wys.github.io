@@ -1,0 +1,2 @@
+# 服务器的sshd_config配置文件中password_authortion设置为了不允许
+

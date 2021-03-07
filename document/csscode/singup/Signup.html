@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "device" = device-width,initial-scale=1.0>
+        <title></title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                outline: 0px;
+                font-family: 'poppins',sans-serif;
+            }
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                /* background: url("file:///F:/vscodeBackground/2.jpg"); */
+                background: url("/img/3.jpg")
+                /* background-color: black; */
+            }
+            .container{
+                width: 330px;
+                background: #fff;
+                border-radius: 50px;
+                text-align: center;
+                padding: 50px 35px 10px 35px;
+                opacity: 0.4
+
+            }
+
+            .container header{
+                font-size: 35px;
+                font-weight: 600;
+                margin: 0 0 30px 0;
+
+            }
+            .container .form-outer{
+                width: 100%;
+                overflow: hidden;
+            }
+            .form-outer form{
+                display: flex;
+                width: 400%;
+            }
+            .form-outer form .page{
+                width: 25%;
+            }
+            .form-outer form .page .title{
+                text-align: left;
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .form-outer form .page  .field{
+                height: 45px;
+                width: 330px;
+                display: flex;
+                margin: 45px 0px;
+                position: relative;
+            }
+            .form-outer form .page  .field .label{
+                position: absolute;
+                top: -30px;
+            }
+            .form-outer form .page  .field input{
+                height: 100%;
+                width: 100%;
+                border: 1px solid #2AF598;
+                border-radius: 50px;
+                font-size: 15px;
+                padding-left: 15px;
+
+
+            }
+            .form-outer form .page  .field button{
+                width: 100%;
+                height: 100%;
+                margin-top: -20px;
+                border: none;
+                /* background-color: blue; */
+                background-color: #21D4FD;
+                background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+                border-radius: 50px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                cursor:pointer;
+                transition: 0.3s ease;
+
+            }
+
+            .form-outer form .page  .field button:hover{
+                background: rgb(0, 255, 213);
+            }
+            .form-outer form .page .btns button{
+                margin-top: -20px;!important;
+            }
+            .form-outer form .page .button .next{
+                margin-left: 3px;
+            } 
+            .form-outer form .page .field select{
+                width: 100%;
+                padding-left: 10px;
+                font-size: 17px;
+                font-weight: 600;
+            }
+            .container .progress-bar{
+                display: flex;
+                margin:40px 0px;
+            }
+            .container .progress-bar .step{
+                position: relative;
+                text-align: center;
+                width: 100%;
+            }
+            .container .progress-bar .step p{
+                font-size: 18px;
+                font-weight: 600;
+                color: cyan;
+                margin-bottom: 8px;
+            }
+            .container .progress-bar .step .bullet{
+                position: relative;
+                height: 25px;
+                width: 25px;
+                border: 2px solid #000;
+                display: inline-block;
+                border-radius: 50%;
+
+
+            }
+            .progress-bar .step .bullet::before,
+            .progress-bar .step .bullet::after{
+                position: absolute;
+                content: "";
+                bottom: 12px;
+                right: -51px;
+                height: 3px;
+                width: 44px;
+                background: rgb(0, 0, 0);
+
+            }
+            .container .progress-bar .step .bullet::after{
+                background:rgb(0, 255, 213);
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 0.3s linear forwards;
+            }
+            @keyframes animate {
+                100%{
+                    transform: scaleX(1);
+                }
+                
+            }
+            .container .progress-bar .step span{
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 25px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .container .progress-bar .step .check{
+                /* display: none; */
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                font-size: 15px;
+                transform: translate(-50%,50%);
+                display: none;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <header>Login Form</header>
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Submit</p>
+                    <div class="bullet">
+                        <span>4</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+            </div>
+            <div class="form-outer">
+                <form action="#">
+                    <div class="page">
+                        <div class="title">Basic Info:</div>
+                        <div class="field">
+                            <div class="label">First Name:</div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <div class="label">Last Name:</div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <button>Next</button>   
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Contact Info:</div>
+                        <div class="field">
+                            <div class="label">Email Name:</div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <div class="label">Phone number:</div>
+                            <input type="number">
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-1 prev">Previous</button>   
+                            <button class="next-1 next">Next</button> 
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Data of Birth:</div>
+                        <div class="field">
+                            <div class="label">Data</div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <div class="label">Gender</div>
+                            <select name="" id="">
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-2 prev">Previous</button>   
+                            <button class="next-2 next">Next</button> 
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Login Details:</div>
+                        <div class="field">
+                            <div class="label">Username:</div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <div class="label">Last Name:</div>
+                            <input type="password">
+                        </div>
+                        <div class="field">
+                            <button class="prev-2 prev">Previous</button>   
+                            <button class="Submit">Submit</button>    
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+看错了，把git下目录的etc里的host当成windows下的host

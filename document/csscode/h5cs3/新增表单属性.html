@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="" id="myForm">
+    用户名：<input type="text" name="username" id="username"> <br>
+    密码：<input type="password" name="userpassdwd" id="userpasswd"> <br>
+    加密：<keygen></keygen> <br>
+    <input type="submit">
+    <!-- 邮箱：<input type="email" name="email" multiple> <br> -->
+    <!-- 正则表达式 *代表任意个 ？代表零个或或则一个+代表一个或多个 -->
+    电话：<input type="tel" id="tel" required pattern="^(\+86)?1\d{10}$"> <br>
+    <!-- 网址：<input type="url"> <br>
+    数量：<input type="number" max="109" min="23" value="40"> <br>
+    输入商品名称：<input type="search"> <br>
+    范围：<input type="range" max="90" min="0" value="29"> <br>
+    颜色：<input type="color"> <br>
+    时间：<input type="time"> <br>
+    日期：<input type="date"> <br>
+    日期时间：<input type="datetime-local"> <br>
+    月份：<input type="month"> <br>
+    星期：<input type="week"> <br>
+    <input type="text" name="userName" placeholder="请输入用户名" autofocus autocomplete="on"> <br>
+    上传文件：<input type="file" name="photo" multiple> <br> -->
+    <!-- 专业：
+    <select name="" id="">
+        <option value="1">前端移动与开发</option>
+        <option value="2">java</option>
+        <option value="3">java script</option>
+        <option value="4">c++</option>
+    </select> <br>
+    专业：
+    <input type="text" list="subject">
+    <datalist id="subject">
+        <option value="英语" label="不会">
+        <option value="前端移动与开发" label="前景非常好"></option>
+        <option value="java" label="使用人数多"></option>
+        <option value="javascript" label="做特效"></option>
+        <option value="c++" label="不知道"></option>
+
+    </datalist> <br>
+    网址：
+    <input type="url" list="urls">
+    <datalist id="urls">
+        <option value="http://www.baidu.com" label=百度></option>
+        <option value="http://www.sohu.com" label="搜狐"></option>
+        <option value="http://www.163.com" label="网易"></option>
+    </datalist>
+    <input type="submit"> <br>      -->
+</form>
+<output>总金额：￥388</output> <br>
+地址：<input type="text" name="address" form="myForm">
+<script>
+    document.getElementById("username").oninput=function(){
+        console.log("oninput"+this.value)
+    }
+    document.getElementById("username").onkeyup=function(){
+        console.log("onkeyup"+this.value)
+    }
+    document.getElementById("tel").oninvalid=function(){
+        this.setCustomValidity("请输入合法的11位电话号码")
+    }
+</script>
+<progress max="100" value="10"></progress>
+<meter max="100" min="0" high="40" low="80" value="30"></meter>
+<meter max="100" min="0" high="40" low="80" value="60"></meter>
+<meter max="100" min="0" high="40" low="80" value="90"></meter>
+</body>
+</html>

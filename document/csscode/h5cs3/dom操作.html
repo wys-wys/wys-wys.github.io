@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul>
+        <li>请选择</li>
+        <li class="red">前端</li>
+        <li class="green">java</li>
+        <li class="blue">javascript</li>
+        <li id="c">c++</li>
+    </ul> -->
+    <ul>
+        <li >前端</li>
+        <li class="blue">java</li>
+        <li >javascript</li>
+        <li id="c">c++</li>
+    </ul>
+    <input type="button" value="为第一个元素添加样式" id="add">
+    <input type="button" value="为第二个添加样式" id="remove">
+    <input type="button" value="为第三个添加样式" id="toggle">
+    <input type="button" value="判断第四个元素是否包含某个样式" id="contain">
+    <script>
+        window.onload=function(){
+            // var cli=document.getElementsByTagName("li")[0]
+            // console.log(cli)
+            // qurey ：查询 selector :选择器 queryselector(传入选择器名称)
+            // queryselector 获取单个元素入伙获取的元素不止一个。则只会返回满足条件的第一个
+            // 参数要求。如或是类选择器，必须添加点”.“如果是id选择器，必须添加”#“
+            // var javali=document.querySelector(".green");
+            // console.log(javali)
+            // var javali=document.querySelector("#c");
+            // console.log(javali)
+            // 获取满足条件的所有元素
+            // var allli=document.querySelectorAll("li")
+            // console.log(allli)
+            document.querySelector("#add").onclick=function(){
+                document.querySelector("li").classList.add("red");
+                document.querySelector("li").classList.add("underline");
+                // document.querySelector("li").className="underline";
+                var result=document.querySelector("li").classList.item(1);
+                console.log(result)
+            }
+            document.querySelector("#remove").onclick=function(){
+                document.querySelector(".blue").classList.remove("blue");
+            }
+            document.querySelector("#toggle").onclick=function(){
+                document.querySelectorAll("li")[2].classList.toggle("green");
+            }
+            document.querySelector("#contain").onclick=function(){
+                var iscontain =document.querySelectorAll("li")[2].classList.contains("red");
+                console.log(iscontain);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+### C:\Users\26575\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
