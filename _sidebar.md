@@ -1,7 +1,7 @@
-* [.vscode](document/.vscode)
+* [vscode配置](document/vscode配置)
   * [c_cpp_properties.json](document/.vscode/c_cpp_properties.json)
   * [settings.json](document/.vscode/settings.json)
-* [Android]
+* [Android](document\Android)
 * archlinux的安装和配置
 * beautifulDay
 * c c++project
