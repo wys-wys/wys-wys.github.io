@@ -1,120 +1,67 @@
-* [vscode配置](document/vscode配置)
+* [Android](document/Android/_sidebar.md)
 
-  * [c_cpp_properties.json](document/.vscode/c_cpp_properties.json)
-  * [settings.json](document/.vscode/settings.json)
+* [archlinux的安装和配置](document/archlinux的安装和配置/_sidebar.md)
 
-* [Android](document/Android)
+* [beautifulDay](document/beautifulDay/_sidebar.md)
 
-  * [让安卓手机adb自动监听tcp 5555端口，重启有效](document/Android/让安卓手机adb自动监听[tcp5555]端口，重启有效.md")
+* [c c++project](document/c_c++project/_sidebar.md)
 
-  * [adb命令的使用](document/Android/adb命令的使用.md)
+* [cloud note](document/cloud_note/_sidebar.md)
 
-  * [android分区](document/Android/android分区.md)
+* [csscode](document/csscode/_sidebar.md)
 
-  * [busybox命令的使用](document/Android/busybox命令的使用.md)
+* [docker](document/docker/_sidebar.md)
 
-  * [fastboot驱动无法安装](document/Android/fastboot驱动无法安装.md)
+* [Ideal-Piano](document/Ideal-Piano/_sidebar.md)
 
-  * [gcc编译过程和用法](document/Android/gcc编译过程和用法.md)
+* [kali linux](document/kali_inunx/_sidebar.md)
 
-  * [ida远程调试报错](document/Android/ida远程调试报错.md)
+* [LaTex](document/LaTex/_sidebar.md)
 
-  * [ndk-build编译安卓模块](document/Android/ndk-build编译安卓模块.md)
+* [lgv40刷机相关](document/lgv40刷机相关/_sidebar.md)
 
-  * [ndk-build遇到的问题](document/Android/ndk-build遇到的问题.md)
+* [linux学习记录](document/linux学习记录/_sidebar.md)
 
-  * [termux中安装ssh](document/Android/termux中安装ssh.md)
+* [mc服务端](document/mc服务端/_sidebar.md)
 
-  * [termux中安装使用jupyter搭建网页python开发环境](document/Android/termux中安装使用jupyter搭建网页python开发环境.md)
+* [md笔记](document/md笔记/_sidebar.md)
 
-  * [termux图形界面的安装和配置](document/Android/termux图形界面的安装和配置.md)
+* [MineCraft相关知识](document/MineCraft相关知识/_sidebar.md)
 
-  * [termux安装ssh](document/Android/termux安装ssh.md)
+* [myfile](document/myfile/_sidebar.md)
 
-  * [termux的各种使用](document/Android/termux的各种使用.md)
+* [Mysql](document/Mysql/_sidebar.md)
 
-  * [termux详细操作](document/Android/termux详细操作.md)
+* [npm](document/[npm/_sidebar.md)
 
-  * [terumux中使用java](document/Android/terumux中使用java.md)
+* [OneDrive](document/OneDrive/_sidebar.md)
 
-  * [使用安卓手机制作一个系统盘](document/Android/使用安卓手机制作一个系统盘.md)
+* [picgo-tuchuang](document/picgo-tuchung/_sidebar.md)
 
-  * [在termux中修改路由表](document/Android/在termux中修改路由表.md)
+* [Pychram](document/Pycharm/_sidebar.md)
 
-  * [极致安卓之—Termux安装完整版Linux](document/Android/极致安卓之—Termux安装完整版Linux.md)
+* [python](document/pytthon/_sidebar.md)
 
-    
+* [Telegram bot](document/Telegram bot/_sidebar.md)
 
-    
+* [VBScript](document/VBScript/_sidebar.md)
 
-    
+* [Vscode](document/Vscode/_sidebar.md)
 
-    
+* [windows小问题](document/windows小问题/_sidebar.md)
 
-    
+* [一些好玩的事](document/一些好玩的事/_sidebar.md)
 
-* archlinux的安装和配置
+* [我的世界](document/我的世界/_sidebar.md)
 
-* beautifulDay
+* [我的世界mod和材质包](document/我的世界mod和材质包/_sidebar.md)
 
-* c c++project
+* [服务器部署](document/服务器部署/_sidebar.md)
 
-* cloud note
+* [未完成的事项](document/未完成的事项/_sidebar.md)
 
-* csscode
+* [未整理](document/未整理/_sidebar.md)
 
-* docker
+* [硬件学习](document/硬件学习/_sidebar.md)
 
-* Ideal-Piano
-
-* kali linux
-
-* LaTex
-
-* lgv40刷机相关
-
-* linux学习记录
-
-* mc服务端
-
-* md笔记
-
-* MineCraft相关知识
-
-* myfile
-
-* Mysql
-
-* npm
-
-* OneDrive
-
-* picgo-tuchuang
-
-* Pychram
-
-* python
-
-* Telegram bot
-
-* VBScript
-
-* Vscode
-
-* windows小问题
-
-* 一些好玩的事
-
-* 我的世界
-
-* 我的世界mod和材质包
-
-* 服务器部署
-
-* 未完成的事项
-
-* 未整理
-
-* 硬件学习
-
-* 虚拟机
+* [虚拟机](document/虚拟机_sidebar.md)

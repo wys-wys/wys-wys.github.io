@@ -100,7 +100,7 @@ mqLittleRookie 2019-05-15 17:54:41  9701  收藏 12
 版权
 安装scrapy时，出现如下问题：
 
-![图1](https://img-blog.csdnimg.cn/20190515174138459.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyMTQ1MDk3,size_16,color_FFFFFF,t_70)
+![linux系统的权限管理](https://img-blog.csdnimg.cn/20190515174138459.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyMTQ1MDk3,size_16,color_FFFFFF,t_70)
 
 出现这种问题的原因是缺少Twisted文件，从官网下载一个该文件的版本（Twisted-xxx-win_amd64.whl）并将其放到自己电脑python安装目录的script下即可。官网：https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted，然后command界面下，python的Script目录下，用pip命令安装按Twisted文件，记住是完整的名字而且需要带后缀，以Twisted-19.2.0-cp37-cp37m-win_amd64.whl为例，pip install Twisted-19.2.0-cp37-cp37m-win_amd64.whl,然后在pip install scrapy 即可。
 
