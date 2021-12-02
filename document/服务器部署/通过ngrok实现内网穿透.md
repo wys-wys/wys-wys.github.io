@@ -3,7 +3,7 @@
 * ***本地连接到服务器时提示：Failed to read message: remote error: bad certificate #250***
   * Using hostname instead of ip could solve this problem.
 * 刚开始时一直连接不上，重新在服务器上编译了数次之后，无果。最后通过教程提供的go版本编译后成功
-* 推测可能是因为使用服务器安装得最新版本的go导致
+* # 推测可能是因为使用服务器安装得最新版本的go导致
 * 
 
 # ngrok使用/踩坑分析-http代理

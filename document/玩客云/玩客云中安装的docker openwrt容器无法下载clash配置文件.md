@@ -9,3 +9,4 @@ https://github.com/vernesong/OpenClash/releases/tag/TUN
 设置了clash后发现依然无法翻墙
 
 故通过clash的yacd面板允许局域网，通过局域网代理的方式翻墙
+

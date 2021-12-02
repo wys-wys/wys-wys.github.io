@@ -1,4 +1,5 @@
 # /bin/sh
 git add .
-git commit -m ...
+git commit -a 
+git commit -m kk
 git push
