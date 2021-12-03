@@ -1,5 +1,5 @@
 # /bin/sh
 git add .
 git commit -a 
-git commit -m aaa
+git commit -m adss
 git push
