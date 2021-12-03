@@ -1,0 +1,183 @@
+# centos7 更换yum源
+
+![img](https://csdnimg.cn/release/blogv2/dist/pc/img/original.png)
+
+[家安](https://blog.csdn.net/aa867734398) 2020-08-12 22:45:06 ![img](https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png) 1707 ![img](https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png) 收藏 7
+
+分类专栏： [linux](https://blog.csdn.net/aa867734398/category_7825432.html)
+
+版权
+
+Yellow dog Updater（Yum）是[CentOS](https://www.linuxidc.com/topicnews.aspx?tid=14)所有版本的默认包管理器，yum主要功能是更方便的添加/删除/更新RPM包，自动解决包的依赖性问题，便于管理大量系统的更新问题，其理念是使用一个中心仓库(repository)管理一部分甚至一个distribution的应用程序相互关系，根据计算出来的软件依赖关系进行相关的升级、安装、删除等操作，减少了Linux用户一直头痛的dependencies的问题。可以同时配置多个资源库(Repository)，简洁的配置文件(/etc/yum.conf)，自动解决增加或删除rpm包时遇到的依赖性问题，保持与RPM数据库的一致性。
+
+我们现在把CentOS 7.5的默认yum源更换为国内的阿里云yum源，让下载安装及更新速度更快一些，替换很简单，简单记录一下步骤。
+
+**1、备份**
+
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+
+或
+
+mv /etc/yum/repos.d/CentOS-Base.repo{,.date -I}
+
+**2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/**
+
+**CentOS 5**
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo
+或者
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo
+
+**CentOS 6**
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+或者
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+
+**CentOS 7**
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+或
+
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+**3、添加EPEL**
+
+CentOS 6
+
+wget -O /etc/yum.repos.d/epel-6.repo http://mirrors.aliyun.com/repo/epel-6.repo
+
+CentOS 7
+
+wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+
+如下图：
+
+![CentOS 7的yum更换为国内的阿里yum源](https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cubGludXhpZGMuY29tL3VwbG9hZC8yMDE5XzA4LzE5MDgyMzE4MDExMjQ1LnBuZw?x-oss-process=image/format,png)
+
+**4、清理缓存并生成新的缓存**
+
+yum clean all
+
+yum makecache
+
+![CentOS 7的yum更换为国内的阿里yum源](https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cubGludXhpZGMuY29tL3VwbG9hZC8yMDE5XzA4LzE5MDgyMzE4MDE2MDIyLnBuZw?x-oss-process=image/format,png)
+
+EPEL (Extra Packages for Enterprise Linux，企业版Linux的额外软件包) 是[Fedora](https://www.linuxidc.com/topicnews.aspx?tid=5)小组维护的一个软件仓库项目，为RHEL/CentOS提供他们默认不提供的软件包。这个源兼容RHEL及像CentOS和Scientific Linux这样的衍生版本。
+
+我们可以很容易地通过yum命令从EPEL源上获取上万个在CentOS自带源上没有的软件。EPEL提供的软件包大多基于其对应的Fedora软件包，不会与企业版Linux发行版本的软件发生冲突或替换其文件。
+
+RHEL/CentOS系统有许多第三方源，比较流行的比如RpmForge，RpmFusion，EPEL，Remi等等。然而需要引起注意的是，如果系统添加了多个第三方源，可能会因此产生冲突——一个软件包可以从多个源获取，一些源会替换系统的基础软件包，从而可能会产生意想不到的错误。已知的就有Rpmforge与EPEL会产生冲突。对于这些问题我们建议，调整源的优先权或者有选择性的安装源，但是这需要复杂的操作，如果你不确定如何操作，我们推荐你只安装一个第三方源。
+
+Linux公社的RSS地址：https://www.linuxidc.com/rssFeed.aspx
+
+**本文永久更新链接地址**：https://www.linuxidc.com/Linux/2019-08/160310.htm
+
+# 阅读目录
+
+
+
+- [1、个人安装环境](https://www.cnblogs.com/hester/p/12365068.html#_label0)
+- [2、更改目的](https://www.cnblogs.com/hester/p/12365068.html#_label1)
+- 3、安装步骤
+  - [3.1 备份源文件](https://www.cnblogs.com/hester/p/12365068.html#_label2_0)
+  - [ 3.2 下载更改源](https://www.cnblogs.com/hester/p/12365068.html#_label2_1)
+  - [ 3.3 清空yum缓存并生存cache文件](https://www.cnblogs.com/hester/p/12365068.html#_label2_2)
+  - [ 3.4 尝试更新系统](https://www.cnblogs.com/hester/p/12365068.html#_label2_3)
+
+ 
+
+[回到顶部](https://www.cnblogs.com/hester/p/12365068.html#_labelTop)
+
+## 1、个人安装环境
+
+1.1 CentOS Linux release 7.7.1908 (Core)
+
+[回到顶部](https://www.cnblogs.com/hester/p/12365068.html#_labelTop)
+
+## 2、更改目的
+
+有时候CentOS默认的yum源不一定是国内镜像，导致yum在线安装及更新速度不是很理想。这时候需要将yum源设置为国内镜像站点。
+
+国内主要开源的开源镜像站点应该是网易和阿里云了。具体使用哪个可以根据PING命令获取time，选择time较小源
+
+ 
+
+```
+[root@localhost yum.repos.d]``# ping 163.com``PING 63.com (127.0.0.1) 56(84) bytes of data.``64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 ``time``=0.099 ms``64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 ``time``=0.097 ms``64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 ``time``=0.101 ms
+```
+
+ 
+
+ 
+
+```
+[root@localhost yum.repos.d]``# ping aliyun.com``PING aliyun.com (106.11.172.51) 56(84) bytes of data.``64 bytes from 106.11.172.51 (106.11.172.51): icmp_seq=1 ttl=128 ``time``=17.7 ms``64 bytes from 106.11.172.51 (106.11.172.51): icmp_seq=2 ttl=128 ``time``=17.4 ms``64 bytes from 106.11.172.51 (106.11.172.51): icmp_seq=3 ttl=128 ``time``=15.6 ms
+```
+
+ 
+
+[回到顶部](https://www.cnblogs.com/hester/p/12365068.html#_labelTop)
+
+## 3、安装步骤
+
+
+
+### 3.1 备份源文件
+
+```
+mv` `/etc/yum``.repos.d``/CentOS-Base``.repo ``/etc/yum``.repos.d``/CentOS-Base``.repo.backup
+```
+
+
+
+###  3.2 下载更改源
+
+- CentOS5
+
+```
+wget -O ``/etc/yum``.repos.d``/CentOS-Base``.repo http:``//mirrors``.aliyun.com``/repo/Centos-5``.repo
+```
+
+- CentOS6
+
+```
+wget -O ``/etc/yum``.repos.d``/CentOS-Base``.repo http:``//mirrors``.aliyun.com``/repo/Centos-6``.repo
+```
+
+- CentOS7
+
+```
+wget -O ``/etc/yum``.repos.d``/CentOS-Base``.repo http:``//mirrors``.aliyun.com``/repo/Centos-7``.repo
+```
+
+根据centos版本下载对应的新源，这里以CentOS7为例
+
+```
+wget -O ``/etc/yum``.repos.d``/CentOS-Base``.repo http:``//mirrors``.aliyun.com``/repo/Centos-7``.repo
+```
+
+ 如果wget命令不生效，说明还没有安装wget工具，输入yum -y install wget 回车进行安装，或者使用
+
+```
+curl -O http:``//mirrors``.aliyun.com``/repo/Centos-7``.repo
+```
+
+
+
+###  3.3 清空yum缓存并生存cache文件
+
+```
+yum clean all``yum makecache
+```
+
+
+
+###  3.4 尝试更新系统
+
+```
+yum -y update
+```
+
+ 
+
+分类: [Linux](https://www.cnblogs.com/hester/category/837942.html)

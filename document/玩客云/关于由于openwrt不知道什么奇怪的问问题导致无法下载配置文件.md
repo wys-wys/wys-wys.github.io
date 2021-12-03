@@ -1,0 +1,1 @@
+可以通过pc端的clash更新clash配置文件之后再上到openwrt

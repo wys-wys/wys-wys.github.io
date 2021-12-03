@@ -1,0 +1,2 @@
+在vscode中该插件一直提示不能连接到网络也不能加载所需库文件，尝试过重新安装插件，重新安装vscode ， github的issue说需要把vscode中的http_proxy重新设置，但最后都没有用，最后重启电脑之后解决
+

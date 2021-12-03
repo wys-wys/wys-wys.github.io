@@ -1,0 +1,4 @@
+发现 proxy.pac文件并不是单独存在，而是通过目录中的server.js。当向目标网址发送网页请求时，会自动通过函数生成pac的内容，并通过网页响应给客户端
+
+更改server.js文件的内容不生效，需要重启openwrt中unlocknetease
+

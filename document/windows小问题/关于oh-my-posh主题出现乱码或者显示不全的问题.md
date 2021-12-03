@@ -1,0 +1,1 @@
+你这个字体是ubuntu-mono吧。。换成支持powerline的字体，比如Sarasa mono、Fira Code
