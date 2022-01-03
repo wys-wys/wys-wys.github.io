@@ -135,8 +135,6 @@
 
   <!-- Gitalk，一个现代化的，基于Preact和Github Issue的评论系统。 -->
 
-
-
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
@@ -148,7 +146,7 @@
       admin: ['wys'],
       // facebook-like distraction free mode
       // distractionFreeMode: false,
-      id: decodeURI(window.location.pathname),
+      id: decodeURI(location.pathname),
     })
   </script>
   <!-- Pagination docsify的分页导航插件，由@imyelo提供。 -->
